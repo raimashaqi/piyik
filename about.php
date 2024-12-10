@@ -52,29 +52,32 @@
             </div>
         </div>
 
-        <div class="info-section" data-aos="fade-up">
-            <h2>Suhu Ideal Inkubasi</h2>
-            <p>Suhu, merupakan salah satu faktor paling krusial dalam proses penetasan telur. Kisaran suhu yang ideal untuk penetasan telur unggas adalah antara 37,5°C hingga 39°C.</p>
-            <div class="read-more-container" data-aos="fade-up" data-aos-delay="200">
-                <a href="#" class="read-more-btn">37.5°C</a>
-                <a href="#" class="read-more-btn">39°C</a>
+        <div class="info-cards-container">
+            <div class="info-card">
+                <h2>Suhu Ideal Inkubasi</h2>
+                <p>Suhu merupakan salah satu faktor krusial dalam proses penetasan telur. Kisaran suhu ideal untuk penetasan telur unggas adalah antara 37,5°C hingga 39°C.</p>
+                <div class="temperature-values">
+                    <span class="temp-value">37,5</span>
+                    <span class="temp-value">39</span>
+                </div>
             </div>
-        </div>
-
-        <div class="info-section" data-aos="fade-up">
-            <h2>Kelembaban yang Tepat</h2>
-            <div class="percentage-boxes">
-                <div class="percentage-box" data-aos="zoom-in" data-aos-delay="200">
-                    <h3>35%</h3>
-                    <p>Penyimpanan</p>
-                </div>
-                <div class="percentage-box" data-aos="zoom-in" data-aos-delay="400">
-                    <h3>50-60%</h3>
-                    <p>Inkubasi</p>
-                </div>
-                <div class="percentage-box" data-aos="zoom-in" data-aos-delay="600">
-                    <h3>70-80%</h3>
-                    <p>Menetas</p>
+            
+            <div class="info-card">
+                <h2>Kelembaban yang Tepat</h2>
+                <p>Kelembaban memainkan peran penting dalam kesehatan telur. Sekitar 70% dari berat telur adalah air, sehingga menjaga kelembaban pada tingkat yang tepat sangat penting.</p>
+                <div class="humidity-levels">
+                    <div class="humidity-box">
+                        <h3>35%</h3>
+                        <p>Penyimpanan</p>
+                    </div>
+                    <div class="humidity-box">
+                        <h3>50-60%</h3>
+                        <p>Inkubasi</p>
+                    </div>
+                    <div class="humidity-box">
+                        <h3>70-80%</h3>
+                        <p>Menetas</p>
+                    </div>
                 </div>
             </div>
         </div>

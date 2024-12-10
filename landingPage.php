@@ -50,7 +50,8 @@
                     <div class="hero-content" data-aos="fade-right">
                         <h1>
                             Pantau kesehatan telur dengan mudah menggunakan
-                            <span class="smart-incubator">Smart Incubator</span>
+                            <br>
+                            <span class="smart-incubator">SMART INCUBATOR</span>
                         </h1>
                         <p class="hero-text">Cukup upload gambar telur anda, dan ketahui kesehatannya!</p>
                     </div>
@@ -71,14 +72,16 @@
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-card" data-aos="fade-up">
-                <div class="about-side-text">ABOUT</div>
-                <h2 class="about-title">Pentingnya Menjaga Kesehatan Telur</h2>
-                <p class="about-text">
-                    Menjaga kesehatan telur sebelum proses penetasan sangat penting untuk memastikan 
-                    keberhasilan dan kualitas anak ayam yang dihasilkan. Dua faktor utama yang mempengaruhi 
-                    kesehatan telur adalah suhu dan kelembaban.
-                </p>
-                <a href="about.php" class="read-more-btn">Baca lebih lanjut</a>
+                <div class="about-left">
+                    <div class="about-side-text">ABOUT</div>
+                </div>
+                <div class="about-right">
+                    <h2 class="about-title">Pentingnya Menjaga Kesehatan Telur</h2>
+                    <p class="about-text">
+                        Menjaga kesehatan telur sebelum proses penetasan merupakan langkah penting untuk memastikan keberhasilan dan kualitas anak ayam yang dihasilkan. Kondisi telur yang optimal akan mendukung perkembangan embrio secara maksimal, sehingga menghasilkan anak ayam yang sehat dan kuat. Dua faktor utama yang sangat memengaruhi kesehatan telur adalah suhu dan kelembapan. Suhu yang tepat akan menjaga proses metabolisme embrio tetap stabil dan mencegah kerusakan yang disebabkan oleh panas atau dingin yang ekstrem. 
+                    </p>
+                    <a href="about.php" class="read-more-btn">BACA LEBIH LANJUT</a>
+                </div>
             </div>
         </div>
     </section>
@@ -87,88 +90,85 @@
     <section id="our-product" class="product-section">
         <div class="container">
             <div class="product-card" data-aos="fade-up">
-                <div class="product-header" data-aos="fade-right" data-aos-delay="200">
-                    <div class="quote-mark">"</div>
-                    <div class="product-title">
-                        <h2>Produk Kami</h2>
-                        <h3>PIYIK</h3>
+                <div class="product-left">
+                    <div class="product-header" data-aos="fade-right" data-aos-delay="200">
+                        <div class="product-title">
+                            <h2>Produk Kami</h2>
+                            <h3>PIYIK</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-text" data-aos="fade-right" data-aos-delay="400">
+                        Inkubator Telur Pintar adalah perangkat modern berbasis IoT yang dirancang untuk memastikan 
+                        proses penetasan telur berjalan secara efisien dan optimal. Dengan teknologi pengendalian suhu 
+                        otomatis, lampu akan menyala saat suhu terlalu rendah, dan kipas akan aktif saat suhu terlalu tinggi. 
+                        Selain itu, pengguna dapat dengan mudah mengatur setpoint suhu sesuai kebutuhan untuk menciptakan 
+                        kondisi yang ideal.
                     </div>
                 </div>
-                
-                <div class="product-content">
-                    <div class="product-text" data-aos="fade-right" data-aos-delay="400">
-                        <p class="highlight-text">
-                            Inkubator Telur Pintar adalah perangkat modern berbasis IoT yang dirancang untuk memastikan 
-                            proses penetasan telur berjalan secara efisien dan optimal. Dengan teknologi pengendalian suhu 
-                            otomatis, lampu akan menyala saat suhu terlalu rendah, dan kipas akan aktif saat suhu terlalu tinggi. 
-                            Selain itu, pengguna dapat dengan mudah mengatur setpoint suhu sesuai kebutuhan untuk menciptakan 
-                            kondisi yang ideal.
-                        </p>
-                        <p class="additional-text">
-                            Melalui aplikasi Android dan website, Anda dapat memantau suhu dan status inkubator secara real-time kapan saja 
-                            dan di mana saja. Notifikasi langsung akan diberikan jika terjadi perubahan suhu ekstrem atau gangguan sistem, 
-                            memberikan kenyamanan dan ketenangan dalam pengelolaan. Inkubator ini tidak hanya hemat energi tetapi juga 
-                            memenuhi standar industri, menjadikannya pilihan tepat untuk kebutuhan penetasan telur Anda.
-                        </p>
-                    </div>
-                    <div class="product-image" data-aos="fade-left" data-aos-delay="600">
-                        <img src="img/incubator.jpg" alt="Smart Incubator">
+
+                <div class="product-right" data-aos="fade-left" data-aos-delay="600">
+                    <div class="product-image-wrapper">
+                        <div class="product-image-shadow"></div>
+                        <img src="img/incubator.jpg" alt="Smart Incubator" class="product-image">
                     </div>
                 </div>
+            </div>
+
+            <div class="bottom-highlight-text" data-aos="fade-up" data-aos-delay="800">
+                Melalui aplikasi Android dan website, Anda dapat memantau suhu dan status inkubator secara real-time kapan saja 
+                dan di mana saja. Notifikasi langsung akan dikirimkan jika terjadi perubahan suhu ekstrem atau gangguan sistem, 
+                memberikan kenyamanan dan ketenangan dalam pengelolaan. Inkubator ini tidak hanya hemat energi tetapi juga 
+                memenuhi standar industri, menjadikannya pilihan tepat untuk kebutuhan penetasan telur Anda.
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="service-image" data-aos="fade-right">
-                        <img src="img/incubator.jpg" alt="Incubator" class="img-fluid">
+        <div class="services-container">
+            <div class="service-image" data-aos="fade-right">
+                <img src="img/incubator.jpg" alt="Incubator">
+            </div>
+            
+            <div class="services-grid" data-aos="fade-left">
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-temperature-high"></i>
+                        <h3>Pengaturan Suhu Otomatis</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Lampu dan kipas akan menyala otomatis untuk mendapatkan suhu optimal telur</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="services-grid" data-aos="fade-left" data-aos-delay="200">
-                        <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="service-icon">
-                                <i class="fas fa-temperature-high"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>Pengaturan Suhu Otomatis</h3>
-                                <p>Lampu dan kipas akan menyala otomatis untuk mendapatkan suhu optimal telur</p>
-                            </div>
-                        </div>
 
-                        <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
-                            <div class="service-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>Pemantauan Real-Time</h3>
-                                <p>Pantau suhu dan kondisi inkubator langsung dari perangkat Android atau website kami, kapan saja dan dimana saja.</p>
-                            </div>
-                        </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                        <h3>Pemantauan Real-Time</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Pantau suhu dan kondisi inkubator langsung dari perangkat Android atau website kami, kapan saja dan dimana saja.</p>
+                    </div>
+                </div>
 
-                        <div class="service-card" data-aos="zoom-in" data-aos-delay="800">
-                            <div class="service-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>Desain Terstandardisasi</h3>
-                                <p>Dirancang dengan standar industri untuk memastikan keandalan, keamanan, dan efisiensi maksimal dalam setiap proses penetasan.</p>
-                            </div>
-                        </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-cog"></i>
+                        <h3>Desain terstandardisasi</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Dirancang dengan standar industri untuk memastikan keandalan, keamanan, dan efisiensi maksimal dalam setiap proses penetasan.</p>
+                    </div>
+                </div>
 
-                        <div class="service-card active" data-aos="zoom-in" data-aos-delay="1000">
-                            <div class="service-icon">
-                                <i class="fas fa-sliders-h"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>Atur Setpoint Suhu</h3>
-                                <p>Pengguna dapat mengatur setpoint suhu secara manual sesuai kebutuhan untuk memastikan kondisi optimal.</p>
-                            </div>
-                        </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="service-icon">
+                        <i class="fas fa-sliders-h"></i>
+                        <h3>Atur Setpoint Suhu</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Pengguna dapat mengatur setpoint suhu secara manual sesuai kebutuhan untuk memastikan kondisi optimal.</p>
                     </div>
                 </div>
             </div>
