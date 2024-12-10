@@ -94,8 +94,8 @@ function updateKelembabanChart(timeFilter) {
             datasets: [{
                 label: "Waktu",
                 fill: true,
-                backgroundColor: "rgba(0, 156, 255, .3)",
-                borderColor: "rgba(0, 156, 255, 1)",
+                backgroundColor: "rgba(255, 217, 61, 0.3)",
+                borderColor: "rgba(255, 217, 61, 1)",
                 data: kelembaban_data[timeFilter].data
             }]
         },
@@ -147,8 +147,8 @@ function updateDHTChart(timeFilter) {
             datasets: [{
                 label: "Waktu",
                 fill: true,
-                backgroundColor: "rgba(0, 156, 255, .3)",
-                borderColor: "rgba(0, 156, 255, 1)",
+                backgroundColor: "rgba(255, 217, 61, 0.3)",
+                borderColor: "rgba(255, 217, 61, 1)",
                 data: dht_data[timeFilter].data
             }]
         },
@@ -200,8 +200,8 @@ function updateChart(timeFilter) {
             datasets: [{
                 label: "Waktu",
                 fill: true,
-                backgroundColor: "rgba(0, 156, 255, .3)",
-                borderColor: "rgba(0, 156, 255, 1)",
+                backgroundColor: "rgba(255, 217, 61, 0.3)",
+                borderColor: "rgba(255, 217, 61, 1)",
                 data: chartData[timeFilter].data
             }]
         },

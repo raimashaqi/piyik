@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Kesehatan Telur - PIYIK</title>
+    <title>Upload - PIYIK</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
 </head>
@@ -49,47 +49,30 @@
                 <span>step 1</span>
             </div>
             <div class="step">
-                <div class="step-dot"></div>
+                <div class="step-dot active"></div>
                 <span>step 2</span>
             </div>
         </div>
 
         <!-- Form Container -->
         <div class="form-container">
-        
-            
-            <h2>ISI INFORMASI DASAR BERIKUT</h2>
-            
-            <form>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Nama Lengkap</label>
-                        <input type="text" placeholder="Nama Lengkap" required>
-                    </div>
-                    <div class="form-group">
-                        <label>No Telepon</label>
-                        <input type="tel" placeholder="No Telepon" required>
-                    </div>
+            <h2>UPLOAD GAMBAR TELUR</h2>
+            <h3>Anda dapat mengupload beberapa gambar. Satu gambar hanya terdiri dari 1 telur</h3>
+            <div class="upload-box">
+                <div class="upload-area">
+                <svg class="camera-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                </svg>
+                    <div class="drag-text">Drag and drop file here</div>
+                    <div>or</div>
+                    <button class="pilih-file-btn">Pilih File</button>
+                    <div class="file-info">Anda dapat mengupload file dengan format .jpg, .jpeg, atau .png maksimal 10 MB</div>
                 </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Pilih jenis telur</label>
-                        <select required>
-                            <option value="" disabled selected>Pilih jenis telur</option>
-                            <option value="ayam">Telur Ayam</option>
-                            <option value="bebek">Telur Bebek</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
 
-        <button class="next-btn" onclick="window.location.href='upload.php'">NEXT</button>
+        <a href="hasil.php" class="next-btn">SUBMIT</a>
     </main>
 
     <!-- Footer -->

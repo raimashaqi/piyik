@@ -1,8 +1,11 @@
 /********** Template CSS **********/
 :root {
-    --primary: #009CFF;
-    --light: #F3F6F9;
-    --dark: #191C24;
+    --primary: #FFD93D;
+    --secondary: #4F4F4F;
+    --accent: #FFB800;
+    --light: #FFFDF6;
+    --dark: #333333;
+    --white: #FFFFFF;
 }
 
 .back-to-top {
@@ -35,7 +38,15 @@
 }
 
 .btn.btn-primary {
-    color: #FFFFFF;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--secondary);
 }
 
 .btn-square {
@@ -82,7 +93,7 @@
 .content {
     margin-left: 250px;
     min-height: 100vh;
-    background: #FFFFFF;
+    background: var(--white);
     transition: 0.5s;
 }
 
@@ -133,8 +144,8 @@
 
 .sidebar .navbar .navbar-nav .nav-link:hover,
 .sidebar .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-    background: #FFFFFF;
+    color: var(--secondary);
+    background: var(--white);
     border-color: var(--primary);
 }
 
@@ -144,7 +155,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
+    background: var(--white);
     border-radius: 40px;
 }
 
@@ -192,7 +203,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
+    background: var(--white);
     border-radius: 40px;
 }
 
@@ -284,16 +295,16 @@
     padding: 8px 16px;
     margin-right: 8px;
     border: 1px solid #ddd;
-    background: white;
+    background: var(--white);
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .thermo-filter-button.active, .kelembaban-filter-button.active, .dht-filter-button.active {
-    background: #6366f1;
-    color: white;
-    border-color: #6366f1;
+    background: var(--primary);
+    color: var(--secondary);
+    border-color: var(--accent);
 }
 
 .chart-container {
@@ -306,4 +317,123 @@ canvas {
     height: auto !important;
 }
 
+/* Sign In Page Styles */
+.signin-page {
+    background-color: var(--light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
 
+.signin-box {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.signin-form .input-group-text {
+    background-color: transparent;
+    border: 2px solid #e0e0e0;
+    border-right: none;
+    color: var(--secondary);
+}
+
+.signin-form .custom-input {
+    border: 2px solid #e0e0e0;
+    border-left: none;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.signin-form .input-group:focus-within .input-group-text {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.signin-form .input-group:focus-within .custom-input {
+    border-color: var(--primary);
+}
+
+.signin-form .custom-input:focus {
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+.signin-form .form-label {
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.forgot-password {
+    color: #0d6efd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #0a58ca;
+    text-decoration: underline;
+}
+
+.register-link {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #0a58ca;
+    text-decoration: underline;
+}
+
+.btn-primary {
+    padding: 12px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .signin-box {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+}
+
+/* Update chart colors */
+.chart-line {
+    background-color: rgba(255, 217, 61, 0.3);  /* Light primary */
+    border-color: rgba(255, 217, 61, 1);        /* Solid primary */
+}
+
+/* Update spinner color */
+.spinner-border.text-primary {
+    color: var(--primary) !important;
+}
+
+/* Update text-primary color */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}

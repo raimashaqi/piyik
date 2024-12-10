@@ -28,59 +28,59 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-xxl position-relative bg-white d-flex p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-
-        <!-- Sign Up Start -->
-        <div class="container-fluid">
-            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-                    <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <a href="index.php" class="">
-                                <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>PIYIK</h3>
-                            </a>
-                            <h3>Sign Up</h3>
-                        </div>
-                        <Form action="index.php" method="post">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                            <label for="floatingText">Username</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Password</label>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <a href="">Forgot Password</a>
-                        </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign Up</button>
-</form>
-                        <p class="text-center mb-0">Already have an Account? <a href="signin.php">Sign In</a></p>
-                    </div>
+<div class="signin-container">
+        <div class="row">
+            <!-- Logo Section (Left Side) -->
+            <div class="col-md-5">
+                <div class="logo-wrapper">
+                    <img src="img/Piyik.png" alt="Piyik Logo" class="logo-img">
                 </div>
             </div>
+            
+            <!-- Form Section (Right Side) -->
+            <div class="col-md-7">
+                <h1>Sign Up</h1>
+                <form id="signupForm" onsubmit="return validateSignupForm(event)">
+                    <div class="input-group">
+                        <span class="input-icon">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        <div class="invalid-feedback">Please enter a username</div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-icon">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        <div class="invalid-feedback">Please enter a valid email address</div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <div class="invalid-feedback">Password must be at least 8 characters</div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                        <div class="invalid-feedback">Passwords do not match</div>
+                    </div>
+
+                    <a href="index.php" type="submit" class="btn btn-login">Register</a>
+                    <div class="links">
+                        <a href="signin.php" class="forgot-link">I am already member</a>
+                    </div>
+                </form>
+            </div>
         </div>
-        <!-- Sign Up End -->
     </div>
 
     <!-- JavaScript Libraries -->
@@ -96,6 +96,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/validator.js"></script>
 </body>
 
 </html>

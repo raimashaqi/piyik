@@ -1,0 +1,166 @@
+body {
+    background-color: #FFD803;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   font-family: Arial, sans-serif;
+}
+
+.signin-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Logo Section */
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.logo-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Form Section */
+h1 {
+    color: #8B7355;
+    font-size: 48px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #8B7355;
+    width: 40px;
+    text-align: center;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #8B7355;
+    border-radius: 0;
+    padding: 10px 0 10px 40px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom: 2px solid #8B7355;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.links a {
+    color: #8B7355;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn {
+    border-radius: 25px;
+    font-weight: bold;
+    padding: 12px 0;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    display: block;
+    font-size: 16px;
+}
+
+.btn-login {
+    background-color: #FFE169;
+    border: none;
+    color: #8B7355;
+}
+
+.btn-google {
+    background-color: #FFE169;
+    border: none;
+    color: #8B7355;
+}
+
+.divider {
+    text-align: center;
+    position: relative;
+    margin: 30px 0;
+}
+
+.divider span {
+    background-color: white;
+    padding: 0 15px;
+    color: #8B7355;
+    position: relative;
+    z-index: 1;
+}
+
+.divider:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #8B7355;
+}
+
+/* Hover Effects */
+.btn-login:hover, .btn-google:hover {
+    background-color: #FFD700;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .signin-container {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+}
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control.is-invalid + .invalid-feedback {
+    display: block;
+}
