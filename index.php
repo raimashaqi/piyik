@@ -205,7 +205,8 @@
             <!-- Sales Chart Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-                <div class="col-sm-12 col-xl-6">
+                    <!-- Kelembaban Chart - Full width -->
+                    <div class="col-sm-12">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h6 class="mb-0">Kelembaban</h6>
@@ -217,10 +218,12 @@
                                 <button class="kelembaban-filter-button" data-filter="hari">Jam</button>
                                 <button class="kelembaban-filter-button active" data-filter="detik">Hari</button>
                             </div>
-                        <canvas id="kelembaban-chart"></canvas>
+                            <canvas id="kelembaban-chart"></canvas>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-xl-6">
+
+                    <!-- DHT Chart - Full width -->
+                    <div class="col-sm-12">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h6 class="mb-0">DHT</h6>
@@ -232,10 +235,12 @@
                                 <button class="dht-filter-button" data-filter="jam">Jam</button>
                                 <button class="dht-filter-button" data-filter="hari">Hari</button>
                             </div>
-                        <canvas id="dht-chart"></canvas>
+                            <canvas id="dht-chart"></canvas>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-xl-6">
+
+                    <!-- Thermocouple Chart - Full width -->
+                    <div class="col-sm-12">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h6 class="mb-0">Thermocouple</h6>
@@ -247,7 +252,7 @@
                                 <button class="thermo-filter-button" data-filter="jam">Jam</button>
                                 <button class="thermo-filter-button" data-filter="hari">Hari</button>
                             </div>
-                        <canvas id="thermo-chart"></canvas>
+                            <canvas id="thermo-chart"></canvas>
                         </div>
                     </div>
                 </div>

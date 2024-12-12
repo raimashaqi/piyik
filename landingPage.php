@@ -127,48 +127,56 @@
     <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="services-container">
-            <div class="service-image" data-aos="fade-right">
-                <img src="img/incubator.jpg" alt="Incubator">
+            <div class="services-title-wrapper" data-aos="fade-up">
+                <h2 class="services-title">Layanan</h2>
+                <div class="services-subtitle">Fitur dan Kemampuan Smart Incubator</div>
+                <div class="title-underline"></div>
             </div>
             
-            <div class="services-grid" data-aos="fade-left">
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-temperature-high"></i>
-                        <h3>Pengaturan Suhu Otomatis</h3>
-                    </div>
-                    <div class="service-content">
-                        <p>Lampu dan kipas akan menyala otomatis untuk mendapatkan suhu optimal telur</p>
-                    </div>
+            <div class="services-content-wrapper">
+                <div class="service-image" data-aos="fade-right">
+                    <img src="img/about.jpeg" alt="Incubator">
                 </div>
+                
+                <div class="services-grid" data-aos="fade-left">
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-temperature-high"></i>
+                            <h3>Pengaturan Suhu Otomatis</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Lampu dan kipas akan menyala otomatis untuk mendapatkan suhu optimal telur</p>
+                        </div>
+                    </div>
 
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-clock"></i>
-                        <h3>Pemantauan Real-Time</h3>
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-clock"></i>
+                            <h3>Pemantauan Real-Time</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Pantau suhu dan kondisi inkubator langsung dari perangkat Android atau website kami, kapan saja dan dimana saja.</p>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <p>Pantau suhu dan kondisi inkubator langsung dari perangkat Android atau website kami, kapan saja dan dimana saja.</p>
-                    </div>
-                </div>
 
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="service-icon">
-                        <i class="fas fa-cog"></i>
-                        <h3>Desain terstandardisasi</h3>
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="service-icon">
+                            <i class="fas fa-cog"></i>
+                            <h3>Desain terstandardisasi</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Dirancang dengan standar industri untuk memastikan keandalan, keamanan, dan efisiensi maksimal dalam setiap proses penetasan.</p>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <p>Dirancang dengan standar industri untuk memastikan keandalan, keamanan, dan efisiensi maksimal dalam setiap proses penetasan.</p>
-                    </div>
-                </div>
 
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="800">
-                    <div class="service-icon">
-                        <i class="fas fa-sliders-h"></i>
-                        <h3>Atur Setpoint Suhu</h3>
-                    </div>
-                    <div class="service-content">
-                        <p>Pengguna dapat mengatur setpoint suhu secara manual sesuai kebutuhan untuk memastikan kondisi optimal.</p>
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="800">
+                        <div class="service-icon">
+                            <i class="fas fa-sliders-h"></i>
+                            <h3>Atur Setpoint Suhu</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Pengguna dapat mengatur setpoint suhu secara manual sesuai kebutuhan untuk memastikan kondisi optimal.</p>
+                        </div>
                     </div>
                 </div>
             </div>

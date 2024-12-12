@@ -44,7 +44,9 @@
     <div class="container mt-5 pt-5">
         <div class="row">
             <div class="col-md-6" data-aos="fade-right">
-                <div class="yellow-box"></div>
+                <div class="yellow-box">
+                    <img src="img/ABOUT.PNG" alt="About Image" class="img-fluid">
+                </div>
             </div>
             <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
                 <h2>Pentingnya Menjaga Kesehatan Telur Sebelum Menetas</h2>
@@ -97,11 +99,17 @@
                 </div>
                 <div class="recommendation-card" data-aos="zoom-in" data-aos-delay="600">
                     <i class="fas fa-sync"></i>
-                    <h4>Pengaturan Suhu</h4>
+                    <h4>Pemutaran Telur</h4>
                     <p>Lakukan pemutaran telur secara teratur</p>
                 </div>
             </div>
         </div>
+    </div>
+    
+    <!-- Call to Action Section -->
+    <div class="container text-center my-5" data-aos="fade-up">
+        <h3>Ingin cek kesehatan telur anda?</h3>
+        <a href="form.html" class="btn mt-3">Cek Sekarang</a>
     </div>
     
     <!-- Footer -->
@@ -115,8 +123,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000,
-            once: true
+            duration: 1500, // Mengubah dari 1000 ke 1500
+            once: true,
+            delay: 100 // Menambahkan delay
         });
     </script>
 </body>
