@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PIYIK - Smart Incubator</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-hashtag"></i>
+                <span>PIYIK</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="manage.html" class="active">
+                    <i class="fas fa-cog"></i>
+                    <span>Manage Incubator</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Manage Incubator</h1>
+                <div class="user-info">
+                    <span>Kelompok 13 SISTER 2024</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </header>
+
+            <!-- Add New Incubator Form -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">Add New Incubator</h2>
+                    <form class="incubator-form">
+                        <div class="form-group">
+                            <label>Device ID</label>
+                            <input type="text" class="form-control" placeholder="Enter device ID">
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label>Registered By</label>
+                            <input type="text" class="form-control" placeholder="Enter registrant name">
+                        </div>
+                        <div class="form-group">
+                            <label>Egg Type</label>
+                            <select class="form-control">
+                                <option>Chicken</option>
+                                <option>Duck</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-warning">Add Incubator</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Incubators Table -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Your Incubators</h2>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>DEVICE ID</th>
+                                    <th>NAME</th>
+                                    <th>REGISTERED BY</th>
+                                    <th>REGISTERED AT</th>
+                                    <th>EGG TYPE</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-warning">1A</td>
+                                    <td>Kelompok14</td>
+                                    <td>Kelompok13</td>
+                                    <td>12/11/2024, 9:26:32 PM</td>
+                                    <td>
+                                        <select class="form-control form-control-sm">
+                                            <option>Duck</option>
+                                            <option>Chicken</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-warning">2B</td>
+                                    <td>TestNama</td>
+                                    <td>TestOrang</td>
+                                    <td>12/23/2024, 7:03:00 AM</td>
+                                    <td>
+                                        <select class="form-control form-control-sm">
+                                            <option>Duck</option>
+                                            <option>Chicken</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

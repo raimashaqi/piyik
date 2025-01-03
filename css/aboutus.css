@@ -1,0 +1,747 @@
+:root {
+    --primary-color: #FFD93D;
+    --secondary-color: #4F4F4F;
+    --accent-color: #FFF1A6;
+    --text-color: #333333;
+    --light-bg: #FFFDF6;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333 !important;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+.login-btn {
+    background-color: #007bff;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Feature Cards */
+.feature-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: white;
+    transition: all 0.3s ease;
+    height: 180px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    min-width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-content h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.feature-content p {
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Business Section */
+.fables-bussiness-section {
+    position: relative;
+    overflow: hidden;
+    margin: 4rem 0;
+    min-height: 500px;
+    background: linear-gradient(to right,
+        rgba(255, 255, 255, 0.1) 40%,  /* Bagian kiri lebih jelas */
+        rgba(255, 255, 255, 0.9) 40%   /* Bagian kanan lebih transparan */
+    );
+}
+
+.fables-bussiness-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-image: url('../img/peternakan.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.fables-bussiness-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Bagian kanan */
+    height: 80%;
+    background-image: url('../img/peternakan.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Opacity lebih kecil untuk teks */
+    z-index: -1;
+}
+
+.row.g-0 {
+    position: relative;
+    z-index: 1;
+}
+
+.business-image-container {
+    height: 100%;
+    min-height: 500px;
+    position: relative;
+    width: 100%;
+}
+
+.business-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fables-bussiness-caption {
+    padding: 4rem;
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+}
+
+.fables-bussiness-caption h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.fables-second-text-color {
+    color: #333;
+}
+
+.fables-forth-text-color {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 991px) {
+    .fables-bussiness-section {
+        min-height: 400px;
+    }
+    
+    .fables-bussiness-caption {
+        padding: 3rem;
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fables-bussiness-section {
+        background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.1) 30%,
+            rgba(255, 255, 255, 0.9) 30%
+        );
+    }
+    
+    .fables-bussiness-caption {
+        padding: 2rem;
+        margin-top: 0;
+    }
+    
+    .fables-bussiness-caption h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Team Section */
+.fables-team {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.team-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.team-col {
+    flex: 0 0 25%;
+    padding: 15px;
+}
+
+.team-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--primary-color); /* Garis kuning di atas card */
+}
+
+.team-image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 5px;
+    aspect-ratio: 1; /* Membuat gambar persegi */
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%; /* Menggeser fokus gambar lebih ke atas */
+    transition: transform 0.3s ease;
+}
+
+.team-info {
+    padding: 12px; /* Mengurangi padding */
+    text-align: center;
+    border-top: 2px solid var(--primary-color);
+    background: #fff;
+}
+
+.team-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.team-position {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin: 3px 0; /* Mengurangi margin */
+    line-height: 1.2;
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px 0; /* Mengurangi padding */
+    border-top: 1px solid #eee;
+}
+
+.team-social a {
+    width: 28px; /* Mengurangi ukuran icon */
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background: #f5f5f5;
+}
+
+.team-social a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .team-col {
+        flex: 0 0 33.333%; /* 3 kolom di layar medium */
+    }
+}
+
+@media (max-width: 992px) {
+    .team-col {
+        flex: 0 0 50%; /* 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 576px) {
+    .team-col {
+        flex: 0 0 100%; /* 1 kolom di mobile */
+    }
+}
+
+/* Testimonial Section */
+.fables-testimonial {
+    background-image: url('../img/overlay-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.fables-after-overlay {
+    position: relative;
+}
+
+.fables-after-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.white-color {
+    color: #fff !important;
+}
+
+.fables-third-text-color {
+    color: #e0e0e0;
+}
+
+.z-index {
+    position: relative;
+    z-index: 1;
+}
+
+.fables-btn-rounded {
+    border-radius: 25px;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+}
+
+.white-color-hover:hover {
+    background-color: #fff !important;
+    color: #333 !important;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-copyright {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .business-image-container {
+        height: 300px;
+    }
+    
+    .fables-bussiness-caption {
+        padding: 3rem;
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .login-btn {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .feature-card {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .team-card {
+        margin-bottom: 20px;
+    }
+
+    .fables-bussiness-section {
+        background: linear-gradient(to bottom, 
+            rgba(255, 255, 255, 0.95) 50%, 
+            rgba(255, 255, 255, 0.8) 100%
+        );
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Counter Section */
+.fables-counter-section {
+    padding: 0 0 0px; /* Menghapus padding top */
+    margin-top: 0;
+    background-color: #fff;
+}
+
+.counter-box {
+    text-align: center;
+    padding: 10px;
+}
+
+.counter-box h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    border: 2px solid var(--primary-color);
+    display: inline-block;
+    padding: 8px 25px;
+    margin-bottom: 10px;
+    min-width: 120px;
+}
+
+.counter-box p {
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Experience Section */
+.experience-title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+
+}
+
+.experience-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.circle-progress {
+    position: relative;
+    padding: 20px;
+}
+
+.progress {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.progress::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--color) var(--progress), transparent 0deg);
+    transition: all 1.5s ease;
+}
+
+.progress-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color);
+    z-index: 2;
+}
+
+.circle-progress h3 {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Responsive styles for counter and progress */
+@media (max-width: 768px) {
+    .counter-box h2 {
+        font-size: 30px;
+        padding: 6px 15px;
+        min-width: 100px;
+    }
+    
+    .counter-box p {
+        font-size: 12px;
+    }
+    
+    .progress {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .progress-number {
+        font-size: 20px;
+    }
+}
+
+/* Hero Section */
+.hero-about {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    margin-top: 76px; /* Untuk memberikan ruang di bawah navbar fixed */
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.hero-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/cover.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.hero-title {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero-title span {
+    color: var(--primary-color);
+    position: relative;
+}
+
+.hero-title::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 40px;
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .hero-about {
+        height: 200px;
+        padding: 40px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-title::before {
+        height: 30px;
+    }
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 50px 0;
+    background-color: var(--accent-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 200%;
+    background: var(--primary-color);
+    transform: rotate(-10deg);
+    z-index: 0;
+    opacity: 0.1;
+}
+
+.mission-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-height: 400px;
+}
+
+.mission-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.mission-image:hover img {
+    transform: scale(1.1);
+}
+
+.mission-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.mission-icon {
+    color: #e48100; /* Warna merah untuk icon roket */
+    margin-bottom: 15px;
+}
+
+.mission-icon i {
+    font-size: 32px; /* Ukuran icon lebih besar */
+}
+
+.mission-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e48100; /* Warna merah untuk judul */
+    margin-bottom: 15px;
+}
+
+.mission-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 991px) {
+    .mission-section {
+        padding: 40px 0;
+    }
+    
+    .mission-content {
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-section {
+        padding: 30px 0;
+    }
+}
