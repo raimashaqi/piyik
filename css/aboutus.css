@@ -103,8 +103,8 @@
 .fables-bussiness-section {
     position: relative;
     overflow: hidden;
-    margin: 4rem 0;
-    min-height: 500px;
+    margin: 0 0;
+    min-height: 400px;
     background: linear-gradient(to right,
         rgba(255, 255, 255, 0.1) 40%,  /* Bagian kiri lebih jelas */
         rgba(255, 255, 255, 0.9) 40%   /* Bagian kanan lebih transparan */
@@ -181,7 +181,7 @@
 .fables-forth-text-color {
     color: #666;
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 991px) {
@@ -501,54 +501,106 @@ footer {
 }
 
 /* Experience Section */
-.experience-title {
-    font-size: 35px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-
-}
-
-.experience-subtitle {
-    text-align: center;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-.circle-progress {
+.experience-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, 
+        #FFF8E7 0%, 
+        #FFF1D0 25%,
+        #FFE9B7 50%,
+        #FFE2A0 75%,
+        #FFDB88 100%
+    );
     position: relative;
-    padding: 20px;
-}
-
-.progress {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: #f0f0f0;
-    position: relative;
-    margin: 0 auto;
     overflow: hidden;
+    margin: 0;
 }
 
-.progress::after {
+.experience-section::before {
     content: '';
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    background: white;
-    border-radius: 50%;
-}
-
-.progress-bar {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: conic-gradient(var(--color) var(--progress), transparent 0deg);
-    transition: all 1.5s ease;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(#fff 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+}
+
+.experience-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Efek garis bawah */
+.experience-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #FFB100;
+    transition: all 0.3s ease;
+}
+
+/* Efek bayangan saat hover */
+.experience-title:hover {
+    transform: translateY(-3px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience-title:hover::after {
+    width: 120px;
+    box-shadow: 0 2px 4px rgba(255, 177, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .experience-title {
+        font-size: 2.2rem;
+    }
+}
+
+.circle-progress-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.circle-progress-card:hover {
+    transform: translateY(-5px);
+}
+
+.circle-progress-card .progress {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    background: none;
+    position: relative;
+}
+
+.circle-progress-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 0 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.circle-progress-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
 }
 
 .progress-number {
@@ -556,38 +608,27 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--color);
-    z-index: 2;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFB100;
 }
 
-.circle-progress h3 {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
-}
-
-/* Responsive styles for counter and progress */
 @media (max-width: 768px) {
-    .counter-box h2 {
-        font-size: 30px;
-        padding: 6px 15px;
-        min-width: 100px;
+    .experience-section {
+        padding: 60px 0;
     }
     
-    .counter-box p {
-        font-size: 12px;
+    .experience-title {
+        font-size: 2.2rem;
     }
     
-    .progress {
-        width: 120px;
-        height: 120px;
+    .circle-progress-card {
+        padding: 20px 15px;
     }
     
-    .progress-number {
-        font-size: 20px;
+    .circle-progress-card .progress {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -662,42 +703,22 @@ footer {
 /* Mission Section */
 .mission-section {
     padding: 50px 0;
-    background-color: var(--accent-color);
     position: relative;
     overflow: hidden;
-}
-
-.mission-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 100%;
-    height: 200%;
-    background: var(--primary-color);
-    transform: rotate(-10deg);
-    z-index: 0;
-    opacity: 0.1;
+    margin: 0;
 }
 
 .mission-image {
     position: relative;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-height: 400px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 .mission-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.05);
+    height: auto;
     transition: transform 0.3s ease;
-}
-
-.mission-image:hover img {
-    transform: scale(1.1);
 }
 
 .mission-content {
@@ -707,41 +728,275 @@ footer {
 }
 
 .mission-icon {
-    color: #e48100; /* Warna merah untuk icon roket */
+    color: #FF6B6B;
     margin-bottom: 15px;
 }
 
 .mission-icon i {
-    font-size: 32px; /* Ukuran icon lebih besar */
+    font-size: 32px;
 }
 
 .mission-content h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #e48100; /* Warna merah untuk judul */
-    margin-bottom: 15px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .mission-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #666;
-    margin-bottom: 12px;
-}
-
-@media (max-width: 991px) {
-    .mission-section {
-        padding: 40px 0;
-    }
-    
-    .mission-content {
-        padding: 15px 0;
-        margin-top: 20px;
-    }
+    margin-bottom: 15px;
 }
 
 @media (max-width: 768px) {
     .mission-section {
-        padding: 30px 0;
+        padding: 40px 0;
+    }
+    
+    .mission-content h2 {
+        font-size: 2rem;
+    }
+    
+    .mission-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Vision Section */
+.vision-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+.vision-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.vision-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.vision-badge {
+    position: absolute;
+    bottom: 30px;
+    right: -20px;
+    background: var(--primary-color);
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.vision-badge span {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.vision-content {
+    padding-left: 30px;
+}
+
+.vision-content .subtitle {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.vision-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.vision-text {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.vision-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.feature-item span {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 991px) {
+    .vision-section {
+        padding: 60px 0;
+    }
+    
+    .vision-content {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+    
+    .vision-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .vision-badge {
+        right: 20px;
+        bottom: 20px;
+        padding: 10px 20px;
+    }
+    
+    .vision-badge span {
+        font-size: 1rem;
+    }
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Menghilangkan gap antar section */
+.vision-section + .mission-section,
+.mission-section + .experience-section {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Menghilangkan gap yang mungkin disebabkan oleh container atau row */
+.container {
+    margin-bottom: 0;
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+.reason {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Tambahkan style untuk circle progress */
+.circle-progress {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.progress {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    position: relative;
+    background: none;
+}
+
+.progress-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    z-index: 1;
+}
+
+.circular-chart {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+}
+
+.circle {
+    fill: none;
+    stroke-linecap: round;
+    transition: stroke-dasharray 2s ease-out;
+    stroke-width: 3.5;
+}
+
+.circle-progress h3 {
+    font-size: 18px;
+    color: #666;
+    margin: 15px 0 5px;
+}
+
+/* Menghilangkan background pada container */
+.col-6.col-md-3 {
+    background: none;
+}
+
+@media (max-width: 768px) {
+    .progress {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .progress-value {
+        font-size: 24px;
+    }
+    
+    .circle-progress h3 {
+        font-size: 16px;
     }
 }

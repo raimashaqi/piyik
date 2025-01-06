@@ -1,98 +1,68 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Counter Animation
-    function animateCounter() {
-        const counters = document.querySelectorAll('.fables-counter-value');
-        const decimalCounters = document.querySelectorAll('.fables-counter-value-decimal');
-        
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-count'));
-            let current = 0;
-            const increment = target / 50;
+$(document).ready(function() {
+    function createCircleProgress() {
+        $('.progress').each(function() {
+            const $this = $(this);
+            const percentage = $this.data('percentage');
+            const color = $this.data('color');
             
-            const updateCounter = () => {
-                if (current < target) {
-                    current += increment;
-                    counter.textContent = Math.ceil(current);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target;
-                }
-            };
+            // Set initial progress value to 0
+            $this.find('.progress-value').text('0%');
             
-            updateCounter();
-        });
-
-        decimalCounters.forEach(counter => {
-            const target = parseFloat(counter.getAttribute('data-count'));
-            let current = 0;
-            const increment = target / 50;
+            // Create SVG
+            const svgHTML = `
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle"
+                        d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                        fill="none"
+                        stroke="${color}"
+                        stroke-width="2.5"
+                        stroke-dasharray="0, 100"
+                    />
+                </svg>
+            `;
             
-            const updateCounter = () => {
-                if (current < target) {
-                    current += increment;
-                    counter.textContent = current.toFixed(1) + '%';
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target.toFixed(1) + '%';
-                }
-            };
-            
-            updateCounter();
+            $this.append(svgHTML);
         });
     }
 
-    // Progress Circle Animation
-    function animateCircleProgress() {
-        const progressBars = document.querySelectorAll('.progress-bar');
-        
-        progressBars.forEach(bar => {
-            const percentage = bar.getAttribute('data-percentage');
-            const color = bar.getAttribute('data-color');
-            const numberElement = bar.parentElement.querySelector('.progress-number');
+    function animateProgress() {
+        $('.progress').each(function() {
+            const $this = $(this);
+            const percentage = $this.data('percentage');
+            const $circle = $this.find('.circle');
+            const $value = $this.find('.progress-value');
             
-            bar.style.setProperty('--color', color);
+            // Animate the circle
+            $circle.css('stroke-dasharray', `${percentage}, 100`);
             
-            let current = 0;
-            const increment = percentage / 50;
-            
-            const updateProgress = () => {
-                if (current < percentage) {
-                    current += increment;
-                    const progress = (current * 3.6) + 'deg';
-                    bar.style.setProperty('--progress', progress);
-                    numberElement.textContent = `${Math.round(current)}%`;
-                    requestAnimationFrame(updateProgress);
-                } else {
-                    numberElement.textContent = `${percentage}%`;
+            // Animate the number
+            $({ Counter: 0 }).animate({
+                Counter: percentage
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function() {
+                    $value.text(Math.ceil(this.Counter) + '%');
                 }
-            };
-            
-            updateProgress();
+            });
         });
     }
 
-    // Intersection Observer for animations
-    const observerCallback = (entries, observer) => {
+    // Create circles first
+    createCircleProgress();
+
+    // Add scroll trigger for animation
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.target.classList.contains('fables-counter-section')) {
-                    animateCounter();
-                } else if (entry.target.classList.contains('circle-progress')) {
-                    animateCircleProgress();
-                }
+                animateProgress();
                 observer.unobserve(entry.target);
             }
         });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, {
-        threshold: 0.5
     });
 
-    // Observe elements
-    const counterSection = document.querySelector('.fables-counter-section');
-    const progressSection = document.querySelector('.circle-progress');
-
-    if (counterSection) observer.observe(counterSection);
-    if (progressSection) observer.observe(progressSection);
+    // Observe the progress section
+    observer.observe($('.circle-progress').parent()[0]);
 }); 
